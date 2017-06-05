@@ -13,8 +13,8 @@ module Rails4Upgrade
       RAILS_GEMS.include?(name)
     end
 
-    def satisfied_by_rails4?
-      requirement.satisfied_by?(::Gem::Version.new("4.0.0"))
+    def satisfied_by_rails5?
+      requirement.satisfied_by?(::Gem::Version.new("5.0.0"))
     end
   end
 end

@@ -20,7 +20,7 @@ module Rails4Upgrade
 
       gem.dependencies.inject([]) do |incompatibilities, dependency|
         if dependency.rails?
-          if !dependency.satisfied_by_rails4?
+          if !dependency.satisfied_by_rails5?
             incompatibilities << GemIncompatibility.new(dependency, dependency_path)
           end
         elsif gem.name != dependency.name
